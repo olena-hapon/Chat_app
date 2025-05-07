@@ -1,0 +1,70 @@
+.chatPage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+  position: relative;
+
+  .wrapper {
+    flex: 1;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-block-start: 10px;
+
+    .chat {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+
+      .message {
+        padding: 20px;
+        color: rgb(239, 234, 234);
+        background-color: rgb(154, 154, 154);
+        border-radius: 20px;
+        max-width: 80%;
+        margin-bottom: 15px;
+        width: fit-content;
+      }
+
+      .message.user {
+        background-color: rgb(216, 238, 238);
+        border-radius: 20px;
+        color: black;
+        align-self: self-end;
+      }
+    }
+  }
+
+  .end {
+    padding-bottom: 2px;
+  }
+
+  .header {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid rgb(203, 199, 199);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: rgb(77, 74, 74);
+    font-weight: 400;
+
+    .image {
+      width: 24px;
+      height: 24px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .fistName {
+      margin-right: 8px;
+    }
+  }
+}
