@@ -12,7 +12,7 @@ const Homepage = () => {
       </div>
       <div className="right">
         <div className="img_container">
-          <img src="/chat.jpg" alt="" />
+          <img src="./chat.jpg" alt="" />
         </div>
       </div>
     </div>

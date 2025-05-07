@@ -52,7 +52,7 @@ const NewPromt:React.FC<Props> = ({ onSend, messages }) => {
         <form className="newForm" onSubmit={handleSubmit}>
           <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
           <button>
-            <img src="/arrow.png" alt="" />
+            <img src="./arrow.png" alt="" />
           </button>
         </form>
       </div>

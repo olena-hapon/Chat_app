@@ -102,6 +102,7 @@ const Chatlist = () => {
       navigate(`/dashboard/chats/${createChat._id}`);
   
       setTimeout(() => {
+        // @ts-ignore
         queryClient.invalidateQueries(['chats']);
       }, 3500);
   
@@ -180,11 +181,11 @@ const Chatlist = () => {
     <div className="chatList">
       <div className="chatForm">
         <div className='chatForm_top'>
-          <img src="/user.png" alt="" />
+          <img src="./user.png" alt="" />
           <ToogleBTN />
         </div>
         <div className="chatForm_search">
-          <img src="/search.png" alt="" />
+          <img src="./search.png" alt="" />
           <input
             className="chatForm_input"
             type="text"

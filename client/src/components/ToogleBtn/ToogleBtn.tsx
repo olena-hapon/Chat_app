@@ -34,6 +34,7 @@ const ToogleBTN = () => {
   }, [currentChatId]);
 
   useEffect(() => {
+    // @ts-ignore
     let interval: NodeJS.Timeout;
 
     if (autoSend) {
