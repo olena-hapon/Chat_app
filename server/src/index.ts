@@ -218,7 +218,6 @@ app.post('/api/chats/:chatId/messages', ClerkExpressRequireAuth(), async (req, r
       $push: { messages: userMessage._id },
     });
 
-    // BOT REPLY
     setTimeout(async () => {
       try {
         let quote = '';
