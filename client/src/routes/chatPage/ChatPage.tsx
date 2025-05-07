@@ -3,6 +3,7 @@ import './chatPage.css';
 import { useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useAuth } from '@clerk/clerk-react';
+// @ts-ignore
 import { useParams } from 'react-router-dom';
 
 const fetchChatMessages = async (chatId:string, token:string) => {

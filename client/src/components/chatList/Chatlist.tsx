@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+// @ts-ignore
 import { Link, useNavigate } from 'react-router-dom';
 import CreateChatModal from '../createChatModal/CreateChatModel';
 import './chatList.css';

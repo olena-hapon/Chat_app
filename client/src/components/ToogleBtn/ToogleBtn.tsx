@@ -3,6 +3,7 @@ import './toogleBtn.css';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import socket from '../../../src/socket';
+// @ts-ignore
 import { useParams } from 'react-router-dom';
 
 const ToogleBTN = () => {

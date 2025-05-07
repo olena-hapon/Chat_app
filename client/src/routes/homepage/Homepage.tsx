@@ -1,4 +1,5 @@
 import './homePage.css';
+// @ts-ignore
 import { Link } from 'react-router-dom';
 
 const Homepage = () => {

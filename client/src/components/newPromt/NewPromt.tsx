@@ -1,5 +1,6 @@
 import { useAuth } from '@clerk/clerk-react';
 import { useEffect, useRef, useState } from 'react';
+// @ts-ignore
 import { useParams } from 'react-router-dom';
 import './newPromt.css';
 

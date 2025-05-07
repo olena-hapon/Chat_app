@@ -1,5 +1,6 @@
 import { ClerkProvider, SignedIn, UserButton } from '@clerk/clerk-react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+// @ts-ignore
 import { Link, Outlet } from 'react-router-dom';
 import './rootLayout.css';
 

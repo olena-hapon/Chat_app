@@ -22,6 +22,15 @@ This is the frontend of the chat application that communicates with the backend 
 - **Backend Communication**: React Query for making API requests to the backend
 - **Socket Connection**: Socket.IO for live communication with the backend
 
+Test Login Credentials
+For testing purposes, you can log in with the following credentials:
+
+Email: test.basedata25@gmail.com
+
+Password: test.basedata25
+
+These credentials are for testing only.
+
 ## Setup Instructions
 
 1. Clone the repository.

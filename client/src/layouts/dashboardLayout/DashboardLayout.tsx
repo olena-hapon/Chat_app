@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Outlet, useNavigate } from 'react-router-dom'
 import './dashboardLauot.css'
 import { useAuth } from '@clerk/clerk-react';

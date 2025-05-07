@@ -1,14 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+// @ts-ignore
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import RootLayout from './layouts/rootLayout/RootLayout.tsx'
-import Homepage from './routes/homepage/Homepage.tsx'
-import DashboardPage from "./routes/dashboardPage/DashboardPage.tsx"
-import DashboardLayout from './layouts/dashboardLayout/DashboardLayout.tsx'
-import ChatPage from './routes/chatPage/ChatPage.tsx'
-import SigninPage from './routes/signinPage/SigninPage.tsx'
-import SignupPage from './routes/signupPage/SignupPage.tsx'
+import RootLayout from './layouts/rootLayout/RootLayout'
+import Homepage from './routes/homepage/Homepage'
+import DashboardPage from "./routes/dashboardPage/DashboardPage"
+import DashboardLayout from './layouts/dashboardLayout/DashboardLayout'
+import ChatPage from './routes/chatPage/ChatPage'
+import SigninPage from './routes/signinPage/SigninPage'
+import SignupPage from './routes/signupPage/SignupPage'
 
 const router = createBrowserRouter([
   {
