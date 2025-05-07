@@ -9,7 +9,6 @@ import react from '@vitejs/plugin-react'
 // vite.config.ts
 
 export default defineConfig({
-  base: '/Chat_app/',
   plugins: [react()],
   server: {
     proxy: {
