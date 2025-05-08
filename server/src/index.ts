@@ -59,6 +59,10 @@ server.listen(port, () => {
   console.log("server is running on 3000");
 });
 
+app.get("/api/check", (req, res) => {
+  res.status(200).json({ message: "Server is running" });
+});
+
 app.post("/api/auto-send", async (req: Request, res: Response) => {
   try {
     const chats: ChatDocument[] = await Chat.find().exec();
