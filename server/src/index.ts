@@ -21,7 +21,11 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: '*',
+    origin: [
+      'http://localhost:5173',
+      'http://localhost:4173',
+      'https://chat-app-mu-smoky.vercel.app'
+    ],
     credentials: true,
     allowedHeaders: ["Authorization", "Content-Type"],
   },
@@ -36,7 +40,9 @@ io.on("connection", (socket) => {
 });
 
 app.use(cors({
-  origin:"http://localhost:5173",
+  origin:['http://localhost:5173',
+      'http://localhost:4173',
+      'https://chat-app-mu-smoky.vercel.app'],
   credentials: true,
 }));
 app.use(express.json());
