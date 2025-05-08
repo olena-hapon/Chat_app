@@ -6,6 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useAuth } from '@clerk/clerk-react';
 // @ts-ignore
 import { useParams } from 'react-router-dom';
+
 const fetchChatMessages = async (chatId, token) => {
     const response = await fetch(`${import.meta.env.VITE_API_URL}/api/chats/${chatId}`, {
         headers: {
@@ -17,6 +18,7 @@ const fetchChatMessages = async (chatId, token) => {
     }
     return response.json();
 };
+
 const ChatPage = () => {
     const { id } = useParams();
     const { getToken } = useAuth();
