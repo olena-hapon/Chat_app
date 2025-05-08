@@ -19,11 +19,32 @@ const port = process.env.PORT || 3000;
 const app = express();
 const server = http.createServer(app);
 
+app.use(cors({
+  origin:['http://localhost:5173',
+           'http://localhost:5174',
+          'http://localhost:4173',
+          'https://chat-app-mu-smoky.vercel.app',
+          'https://balanced-pegasus-55.clerk.accounts.dev'
+        ],
+  credentials: true,
+  allowedHeaders: ['Authorization', 'Content-Type'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+}));
+
+app.use(express.json());
+
+app.use((req, res, next) => {
+  console.log('Authorization Header:', req.headers.authorization); 
+  next();
+});
+
+
 const io = new Server(server, {
   cors: {
     origin: [
       'http://localhost:5173',
       'http://localhost:4173',
+      'http://localhost:5174',
       'https://chat-app-mu-smoky.vercel.app'
     ],
     credentials: true,
@@ -38,18 +59,6 @@ io.on("connection", (socket) => {
     console.log("Client disconnected");
   });
 });
-
-app.use(cors({
-  origin:['http://localhost:5173',
-          'http://localhost:4173',
-          'https://chat-app-mu-smoky.vercel.app'],
-  credentials: true,
-  allowedHeaders: ['Authorization', 'Content-Type'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
-}));
-app.use(express.json());
-
-const users = new Map();
 
 const MONGO_URI = process.env.MONGODB_URI || "";
 
@@ -313,9 +322,4 @@ app.delete("/api/chats/:id", ClerkExpressRequireAuth(), async(req, res) => {
   } catch (err) {
     res.status(500).json({ message: "Internal server error" });
   }
-});
-
-app.use((req, res, next) => {
-  console.log('Authorization Header:', req.headers.authorization); 
-  next();
 });
