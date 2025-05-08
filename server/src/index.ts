@@ -41,9 +41,11 @@ io.on("connection", (socket) => {
 
 app.use(cors({
   origin:['http://localhost:5173',
-      'http://localhost:4173',
-      'https://chat-app-mu-smoky.vercel.app'],
+          'http://localhost:4173',
+          'https://chat-app-mu-smoky.vercel.app'],
   credentials: true,
+  allowedHeaders: ['Authorization', 'Content-Type'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
 }));
 app.use(express.json());
 
@@ -313,6 +315,7 @@ app.delete("/api/chats/:id", ClerkExpressRequireAuth(), async(req, res) => {
   }
 });
 
+app.options('*', cors());
 
 app.use((req, res, next) => {
   console.log('Authorization Header:', req.headers.authorization); 
