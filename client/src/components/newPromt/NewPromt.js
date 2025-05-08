@@ -14,7 +14,7 @@ const NewPromt = ({ onSend, messages }) => {
             return;
         try {
             const token = await getToken();
-            await fetch(`${import.meta.env.VITE_API_URL}/api/chats/${chatId}/messages`, {
+            await fetch(`https://chat-backend-jfbx.onrender.com/api/chats/${chatId}/messages`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

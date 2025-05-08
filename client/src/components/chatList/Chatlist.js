@@ -22,7 +22,7 @@ const Chatlist = () => {
         queryKey: ["chats"],
         queryFn: async () => {
             const token = await getToken();
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/chats`, {
+            const response = await fetch('https://chat-backend-jfbx.onrender.com/api/chats', {
                 method: "GET",
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -53,7 +53,7 @@ const Chatlist = () => {
         setSearchQuery('');
         try {
             const token = await getToken();
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/chats`, {
+            const res = await fetch('https://chat-backend-jfbx.onrender.com/api/chats', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ const Chatlist = () => {
     const handleDelateChat = async (chatId) => {
         try {
             const token = await getToken();
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/chats/${chatId}`, {
+            const res = await fetch(`https://chat-backend-jfbx.onrender.com/api/chats/${chatId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -105,7 +105,7 @@ const Chatlist = () => {
             return;
         try {
             const token = await getToken();
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/chats/${chatToEdit._id}`, {
+            const response = await fetch(`https://chat-backend-jfbx.onrender.com/api/chats/${chatToEdit._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
