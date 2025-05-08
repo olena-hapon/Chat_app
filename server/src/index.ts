@@ -315,8 +315,6 @@ app.delete("/api/chats/:id", ClerkExpressRequireAuth(), async(req, res) => {
   }
 });
 
-app.options('*', cors());
-
 app.use((req, res, next) => {
   console.log('Authorization Header:', req.headers.authorization); 
   next();
