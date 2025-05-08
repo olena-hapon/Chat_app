@@ -1,3 +1,4 @@
+
 {
   "version": 2,
   "builds": [
@@ -7,6 +8,10 @@
       "config": {
         "distDir": "client/dist"
       }
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -15,7 +20,15 @@
       "dest": "/client/dist/$1"
     }
   ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/client/dist/index.html"
+    }
+  ],
   "env": {
     "NODE_ENV": "production"
   }
 }
+
+
