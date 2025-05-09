@@ -8,11 +8,17 @@ import react from '@vitejs/plugin-react'
 // })
 // vite.config.ts
 
+// export default defineConfig({
+//   plugins: [react()],
+//   server: {
+//     proxy: {
+//       '/api': 'http://localhost:3000', // або на продакшн сервер, наприклад на Render
+//     },
+//   },
+// });
+
+
 export default defineConfig({
+  base: './',
   plugins: [react()],
-  server: {
-    proxy: {
-      '/api': 'http://localhost:3000', // або на продакшн сервер, наприклад на Render
-    },
-  },
-});
+})
