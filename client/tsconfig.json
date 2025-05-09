@@ -5,13 +5,32 @@
 //     { "path": "./tsconfig.node.json" }
 //   ]
 // }
+
+
+
+// {
+//   "compilerOptions": {
+//     "target": "ESNext",
+//     "module": "ESNext",
+//     "jsx": "react-jsx",
+//     "outDir": "./dist",
+//     "rootDir": "./src",
+//     "strict": true,
+//     "moduleResolution": "node",
+//     "esModuleInterop": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "skipLibCheck": true
+//   },
+//   "include": ["src"],
+//   "exclude": ["dist", "node_modules"]
+// }
+
+
 {
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
     "jsx": "react-jsx",
-    "outDir": "./dist",
-    "rootDir": "./src",
     "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
@@ -19,7 +38,7 @@
     "skipLibCheck": true
   },
   "include": ["src"],
-  "exclude": ["dist", "node_modules"]
+  "exclude": ["node_modules"]
 }
 
 

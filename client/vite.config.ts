@@ -18,10 +18,8 @@ import react from '@vitejs/plugin-react'
 // });
 
 
+
 export default defineConfig({
-  base: './',  // Встановити базовий шлях для статичних файлів
   plugins: [react()],
-  server: {
-    open: true, // автоматично відкривати сайт
-  },
+  base: '/',
 })
