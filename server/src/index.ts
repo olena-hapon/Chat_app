@@ -78,8 +78,8 @@ server.listen(port, () => {
   console.log("server is running on 3000");
 });
 
-app.get("/api/check", (req, res) => {
-  res.status(200).json({ message: "Server is running" });
+app.get("/", (req, res) => {
+  res.status(200).send("Server is running. Welcome to the Chat API.");
 });
 
 app.post("/api/auto-send", async (req: Request, res: Response) => {
