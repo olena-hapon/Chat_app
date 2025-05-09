@@ -1,4 +1,4 @@
-import './homePage.css';
+import './homepage.css';
 // @ts-ignore
 import { Link } from 'react-router-dom';
 
