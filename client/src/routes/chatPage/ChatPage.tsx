@@ -58,7 +58,7 @@ const ChatPage = () => {
     <div className="chatPage">
       <div className="header">
         <div className="image">
-          <img src="./user.png" alt="" />
+          <img src="/user.png" alt="" />
         </div>
         <div className="userInfo">
           <span className='fistName'>{participant.firstName}</span>
