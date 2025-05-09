@@ -79,7 +79,7 @@ server.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-  res.status(200).send("Server is running. Welcome to the Chat API.");
+  res.status(200).send("Server is running/.");
 });
 
 app.post("/api/auto-send", async (req: Request, res: Response) => {
