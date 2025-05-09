@@ -7,7 +7,7 @@ import { useAuth } from '@clerk/clerk-react';
 import { useParams } from 'react-router-dom';
 
 const fetchChatMessages = async (chatId:string, token:string) => {
-  const response = await fetch(`https://chat-backend-jfbx.onrender.com/api/chats/api/chats/${chatId}`, {
+  const response = await fetch(`https://chat-backend-jfbx.onrender.com/api/chats/${chatId}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
